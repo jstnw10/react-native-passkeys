@@ -52,7 +52,7 @@ export async function create(
 ): Promise<RegistrationResponseJSON | null> {
   return ReactNativePasskeysModule.create(
     request,
-    options?.ios?.requireBiometrics ?? true
+    options?.ios?.requireBiometrics ?? false
   )
 }
 
@@ -68,6 +68,6 @@ export async function get(
 ): Promise<AuthenticationResponseJSON | null> {
   return ReactNativePasskeysModule.get(
     request,
-    options?.ios?.requireBiometrics ?? true
+    options?.ios?.requireBiometrics ?? false
   )
 }
